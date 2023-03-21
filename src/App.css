@@ -7,7 +7,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 7vh;
+  min-height: 10vh;
   background-color: rgb(51, 65, 65);
   color: white;
   padding-left: 3em;
@@ -30,3 +30,38 @@ li {
   background-position: center;
   width: 100%;
 }
+
+.home--container {
+  position: relative;
+}
+
+.home--button {
+  position: absolute;
+  left: 55em;
+  top: 15em;
+  height: 6em;
+  width: 20em;
+  border: none;
+  border-radius: 2em;
+}
+
+.home--button:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+  color: rgb(127, 182, 255);
+}
+
+.home--shop {
+  position: absolute;
+  top: 15em;
+  left: 5em;
+  width: 90%;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.438);
+  border-radius: 2em;
+  box-shadow: 10px 5px 11px rgba(0, 128, 0, 0.575);
+}
+
+/* .home--shop > p {
+  
+} */
