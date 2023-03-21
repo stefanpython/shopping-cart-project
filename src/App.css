@@ -1,0 +1,32 @@
+html {
+  min-height: 100%;
+  overflow-y: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7vh;
+  background-color: rgb(51, 65, 65);
+  color: white;
+  padding-left: 3em;
+  padding-right: 2em;
+}
+
+.nav--links {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+li {
+  padding-right: 2em;
+}
+
+.home--img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
