@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Card from "./Card";
 
 const Shop = () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,13 @@ const Shop = () => {
       .then((json) => setData(json));
   }, []);
 
-  return <div className="shop--container"></div>;
+  console.log(data);
+
+  return (
+    <div className="shop--container">
+      <Card />
+    </div>
+  );
 };
 
 export default Shop;

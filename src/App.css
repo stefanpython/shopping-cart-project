@@ -70,3 +70,8 @@ li {
   flex-wrap: wrap;
   margin-left: 5px;
 }
+
+.shop--container {
+  padding: 5em;
+  background-color: whitesmoke;
+}

@@ -1,0 +1,33 @@
+.card--img {
+  width: 150px;
+}
+
+.card--container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  width: fit-content;
+  border: 1px solid rgb(205, 205, 207);
+  border-radius: 0.5em;
+}
+
+.card--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card--button {
+  width: 90%;
+  height: 2.5em;
+  border: none;
+  background-color: rgb(69, 140, 150);
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  border-radius: 0.5em;
+}
+
+hr {
+  width: 250px;
+}
