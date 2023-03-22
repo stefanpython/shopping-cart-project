@@ -23,6 +23,7 @@ nav {
 
 li {
   padding-right: 2em;
+  color: white;
 }
 
 .home--img {
@@ -52,9 +53,9 @@ li {
   position: absolute;
   top: 18em;
   height: 20%;
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: rgba(0, 0, 0, 0.541);
   border-radius: 3em;
-  box-shadow: 10px 7px 15px rgba(0, 85, 134, 0.575);
+  box-shadow: 10px 7px 15px rgba(48, 67, 78, 0.575);
   display: flex;
   justify-content: center;
   align-items: center;
