@@ -6,14 +6,16 @@ const Navbar = () => {
     <nav>
       <h3>Logo</h3>
       <ul className="nav--links">
-        <Link to="/home">
+        <Link to="/home" style={{ textDecoration: "none" }}>
           <li>Home</li>
         </Link>
-        <Link to="/shop">
+        <Link to="/shop" style={{ textDecoration: "none" }}>
           <li>Shop</li>
         </Link>
-        <Link to="/cart">
-          <li>Cart</li>
+        <Link to="/cart" style={{ textDecoration: "none" }}>
+          <li>
+            Cart <span className="cart--number">1</span>
+          </li>
         </Link>
       </ul>
     </nav>
