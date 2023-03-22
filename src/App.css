@@ -26,8 +26,8 @@ li {
 }
 
 .home--img {
-  background-size: cover;
-  background-position: center;
+  background: no-repeat center center fixed;
+  height: 100vh;
   width: 100%;
 }
 
@@ -36,13 +36,10 @@ li {
 }
 
 .home--button {
-  position: absolute;
-  left: 55em;
-  top: 15em;
-  height: 6em;
-  width: 20em;
-  border: none;
   border-radius: 2em;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .home--button:hover {
@@ -53,15 +50,22 @@ li {
 
 .home--shop {
   position: absolute;
-  top: 15em;
-  left: 5em;
-  width: 90%;
-  height: 30%;
-  background-color: rgba(0, 0, 0, 0.438);
-  border-radius: 2em;
-  box-shadow: 10px 5px 11px rgba(0, 128, 0, 0.575);
+  top: 18em;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 3em;
+  box-shadow: 10px 7px 15px rgba(0, 85, 134, 0.575);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* .home--shop > p {
-  
-} */
+.home--shop > p {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
