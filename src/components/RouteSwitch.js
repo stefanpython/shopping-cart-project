@@ -4,6 +4,7 @@ import App from "../App";
 import Shop from "./Shop";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
+import Home from "./Home";
 
 const RouteSwitch = () => {
   return (
@@ -11,6 +12,7 @@ const RouteSwitch = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
