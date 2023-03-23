@@ -31,6 +31,13 @@ const Cart = () => {
     return acc + item.price * item.quantity;
   }, 0);
 
+  const handleQuantityChange = (id, num) => {
+    const updatedItem = cart.map((item) =>
+      id === item.id ? { ...item, quantity: num } : item
+    );
+    setCart(updatedItem);
+  };
+
   return (
     <>
       <h1>Your shopping cart</h1>
@@ -49,7 +56,11 @@ const Cart = () => {
             >
               <h1>-</h1>
             </button>
-            <input type="tel" value={item.quantity} />
+            <input
+              type="number"
+              value={item.quantity}
+              onChange={(e) => handleQuantityChange(item.id, e.target.value)}
+            />
             <button
               onClick={() => handlePlus(item.id)}
               type="button"
