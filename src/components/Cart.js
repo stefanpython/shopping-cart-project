@@ -1,13 +1,14 @@
 import React from "react";
 import "./Cart.css";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "./cartContext";
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
   const handleCheckout = (event) => {
-    console.log("aaaaa");
+    alert(`--Website under construction--
+     --Stay tunned for updates--`);
   };
 
   const handlePlus = (id) => {
@@ -26,7 +27,9 @@ const Cart = () => {
     setCart(updatedItem);
   };
 
-  console.log(cart);
+  const totalPrice = cart.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
 
   return (
     <>
@@ -55,18 +58,17 @@ const Cart = () => {
               <h1>+</h1>
             </button>
 
-            <h1 className="cart--price">
-              ${Math.floor(item.price * item.quantity)}
-            </h1>
-
             <div className="checkout--div"></div>
           </div>
         ))}
 
         {cart.length !== 0 ? (
-          <button onClick={handleCheckout} className="checkout--button">
-            Checkout
-          </button>
+          <>
+            <h1 className="cart--price">${Math.floor(totalPrice)}</h1>
+            <button onClick={handleCheckout} className="checkout--button">
+              Checkout
+            </button>
+          </>
         ) : (
           <h2>You have 0 items in your shopping cart.</h2>
         )}
