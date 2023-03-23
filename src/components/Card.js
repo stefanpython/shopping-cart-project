@@ -10,7 +10,9 @@ const Card = (props) => {
         <p className="card--title">{props.title}</p>
         <p className="card--price">${props.price}</p>
 
-        <button className="card--button">Add to cart</button>
+        <button onClick={() => props.addToCart(props)} className="card--button">
+          Add to cart
+        </button>
       </div>
     </div>
   );
