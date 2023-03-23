@@ -49,12 +49,16 @@ const Cart = (props) => {
 
               <h1 className="cart--price">${item.price}</h1>
 
-              <div className="checkout--div">
-                <button className="checkout--button">Checkout</button>
-              </div>
+              <div className="checkout--div"></div>
             </form>
           </div>
         ))}
+
+        {cart.length !== 0 ? (
+          <button className="checkout--button">Checkout</button>
+        ) : (
+          <h2>You have 0 items in your shopping cart.</h2>
+        )}
       </div>
     </>
   );
