@@ -3,25 +3,27 @@ import "./Cart.css";
 import { useState, useContext } from "react";
 import { CartContext } from "./cartContext";
 
-const Cart = (props) => {
-  const [number, setNumber] = useState(0);
-  const { cart } = useContext(CartContext);
+const Cart = () => {
+  const { cart, setCart } = useContext(CartContext);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("aaa");
+  const handleCheckout = (event) => {
+    console.log("aaaaa");
   };
 
-  const handlePlus = () => {
-    setNumber(number + 1);
+  const handlePlus = (id) => {
+    const updatedItem = cart.map((item) =>
+      id === item.id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCart(updatedItem);
   };
 
-  const handleMinus = () => {
-    if (number === 0) {
-      setNumber(0);
-    } else {
-      setNumber(number - 1);
-    }
+  const handleMinus = (id) => {
+    const updatedItem = cart
+      .map((item) =>
+        id === item.id ? { ...item, quantity: item.quantity - 1 } : item
+      )
+      .filter((item) => item.quantity >= 1);
+    setCart(updatedItem);
   };
 
   console.log(cart);
@@ -34,28 +36,37 @@ const Cart = (props) => {
           <div key={item.id}>
             <img className="cart--image" src={item.image} alt={item.title} />
             <p>{item.title.slice(0, 20)}...</p>
-            <form onSubmit={handleSubmit} className="cart--form">
-              <button
-                onClick={handleMinus}
-                type="button"
-                className="cart--minus"
-              >
-                <h1>-</h1>
-              </button>
-              <input type="tel" value={item.quantity} />
-              <button onClick={handlePlus} type="button" className="cart--plus">
-                <h1>+</h1>
-              </button>
 
-              <h1 className="cart--price">${item.price}</h1>
+            <button
+              onClick={() => {
+                handleMinus(item.id);
+              }}
+              type="button"
+              className="cart--minus"
+            >
+              <h1>-</h1>
+            </button>
+            <input type="tel" value={item.quantity} />
+            <button
+              onClick={() => handlePlus(item.id)}
+              type="button"
+              className="cart--plus"
+            >
+              <h1>+</h1>
+            </button>
 
-              <div className="checkout--div"></div>
-            </form>
+            <h1 className="cart--price">
+              ${Math.floor(item.price * item.quantity)}
+            </h1>
+
+            <div className="checkout--div"></div>
           </div>
         ))}
 
         {cart.length !== 0 ? (
-          <button className="checkout--button">Checkout</button>
+          <button onClick={handleCheckout} className="checkout--button">
+            Checkout
+          </button>
         ) : (
           <h2>You have 0 items in your shopping cart.</h2>
         )}

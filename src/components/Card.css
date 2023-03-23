@@ -29,6 +29,10 @@
   border-radius: 0.5em;
 }
 
+.card--button:active {
+  transform: translateY(5px);
+}
+
 hr {
   width: 250px;
 }
