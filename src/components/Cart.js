@@ -57,6 +57,7 @@ const Cart = () => {
               <h1>-</h1>
             </button>
             <input
+              className="cart--input"
               min="1"
               type="number"
               value={item.quantity}
