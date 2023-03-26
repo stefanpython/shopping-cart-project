@@ -33,7 +33,7 @@ const Cart = () => {
 
   const handleQuantityChange = (id, num) => {
     const updatedItem = cart.map((item) =>
-      id === item.id ? { ...item, quantity: num } : item
+      id === item.id ? { ...item, quantity: Math.floor(num) } : item
     );
     setCart(updatedItem);
   };
@@ -57,6 +57,7 @@ const Cart = () => {
               <h1>-</h1>
             </button>
             <input
+              min="1"
               type="number"
               value={item.quantity}
               onChange={(e) => handleQuantityChange(item.id, e.target.value)}

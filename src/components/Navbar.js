@@ -7,7 +7,7 @@ const Navbar = () => {
   const { cart } = useContext(CartContext);
 
   const totalNumber = cart.reduce((acc, item) => {
-    return acc + item.quantity;
+    return acc + Math.floor(item.quantity);
   }, 0);
 
   return (
