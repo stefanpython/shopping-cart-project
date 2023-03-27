@@ -3,14 +3,88 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: whitesmoke;
+  padding-bottom: 2em;
+  font-family: "Tiro Devanagari Hindi", serif;
+  min-height: 87vh;
+}
+
+.cart--inside--container {
+  margin-top: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 10px 5px 11px grey;
+  background-color: white;
 }
 
 .cart--image {
   width: 100px;
+  margin-left: 21%;
+}
+
+.cart--title {
+  margin-left: 12%;
 }
 
 .input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cart--input {
+  height: 22px;
+  width: 25px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.cart--minus,
+.cart--plus {
+  height: 30px;
+  width: 40px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cart--plus:active,
+.cart--minus:active {
+  transform: translateY(5px);
+}
+
+.cart--minus {
+  background-color: rgba(231, 22, 22, 0.699);
+  color: rgb(0, 0, 0);
+}
+
+.cart--plus {
+  background-color: rgba(65, 248, 65, 0.726);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.cart--input--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout--button {
+  height: 2.5em;
+  width: 10em;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.checkout--button:hover {
+  background-color: rgb(77, 230, 179);
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.cart--inside--container:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
 }

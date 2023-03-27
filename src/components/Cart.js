@@ -40,36 +40,39 @@ const Cart = () => {
 
   return (
     <>
-      <h1>Your shopping cart</h1>
       <div className="cart--container">
+        <h1>Shopping cart:</h1>
+        <hr />
         {cart.map((item) => (
-          <div key={item.id}>
+          <div className="cart--inside--container" key={item.id}>
             <img className="cart--image" src={item.image} alt={item.title} />
-            <p>{item.title.slice(0, 20)}...</p>
+            <p className="cart--title">{item.title.slice(0, 20)}...</p>
 
-            <button
-              onClick={() => {
-                handleMinus(item.id);
-              }}
-              type="button"
-              className="cart--minus"
-            >
-              <h1>-</h1>
-            </button>
-            <input
-              className="cart--input"
-              min="1"
-              type="number"
-              value={item.quantity}
-              onChange={(e) => handleQuantityChange(item.id, e.target.value)}
-            />
-            <button
-              onClick={() => handlePlus(item.id)}
-              type="button"
-              className="cart--plus"
-            >
-              <h1>+</h1>
-            </button>
+            <div className="cart--input--button">
+              <button
+                onClick={() => {
+                  handleMinus(item.id);
+                }}
+                type="button"
+                className="cart--minus"
+              >
+                -
+              </button>
+              <input
+                className="cart--input"
+                min="1"
+                type="number"
+                value={item.quantity}
+                onChange={(e) => handleQuantityChange(item.id, e.target.value)}
+              />
+              <button
+                onClick={() => handlePlus(item.id)}
+                type="button"
+                className="cart--plus"
+              >
+                +
+              </button>
+            </div>
 
             <div className="checkout--div"></div>
           </div>
@@ -77,13 +80,15 @@ const Cart = () => {
 
         {cart.length !== 0 ? (
           <>
-            <h1 className="cart--price">${Math.floor(totalPrice)}</h1>
+            <br />
+            <hr />
+            <h1 className="cart--price">Total: ${Math.floor(totalPrice)}</h1>
             <button onClick={handleCheckout} className="checkout--button">
               Checkout
             </button>
           </>
         ) : (
-          <h2>You have 0 items in your shopping cart.</h2>
+          <h2>Your cart is empty.</h2>
         )}
       </div>
     </>
