@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home--container">
-      <img
-        className="home--img"
-        src="./shopping-cart-project/images/home3.jpg"
-        alt="manequines"
-      />
+      <img className="home--img" src="./images/home3.jpg" alt="manequines" />
 
       <div className="home--shop">
         <p>The newest brands in fashon, at the best prices.</p>
