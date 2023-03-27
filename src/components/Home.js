@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home--container">
-      <img className="home--img" src="./images/home.jpg" alt="manequines" />
+      <img className="home--img" src="./images/home3.jpg" alt="manequines" />
 
       <div className="home--shop">
         <p>The newest brands in fashon, at the best prices.</p>
@@ -16,6 +16,17 @@ const Home = () => {
           </button>
         </Link>
       </div>
+      <footer>
+        Copyright © 2023 Stefanpython &nbsp;
+        <a href="https://github.com/stefanpython">
+          <img
+            className="git"
+            width="30px"
+            src="https://c.tenor.com/A15H8E1VUh8AAAAM/github-cat.gif"
+            alt="cat"
+          />
+        </a>
+      </footer>
     </div>
   );
 };

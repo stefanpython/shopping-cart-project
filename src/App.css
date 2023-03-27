@@ -6,11 +6,18 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
-  background-color: rgb(51, 65, 65);
+  height: 10vh;
+  /* background-color: rgb(51, 65, 65); */
   color: white;
   padding-left: 3em;
   padding-right: 2em;
+
+  background: #16222a;
+  background: -webkit-linear-gradient(to left, #3a6073, #16222a);
+  background: linear-gradient(to left, #3a6073, #16222a);
+
+  /* border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px; */
 }
 
 .nav--links {
@@ -26,9 +33,9 @@ li {
 }
 
 .home--img {
-  background: no-repeat center center fixed;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
+  display: block;
 }
 
 .home--container {
@@ -45,15 +52,15 @@ li {
 .home--button:hover {
   transform: scale(1.1);
   transition: 0.7s;
-  color: rgb(127, 182, 255);
+  color: rgb(36, 167, 64);
 }
 
 .home--shop {
   position: absolute;
-  top: 18em;
+  top: 14em;
   height: 20%;
-  background-color: rgba(0, 0, 0, 0.541);
-  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.753);
+  border-radius: 10px 150px / 120px;
   box-shadow: 10px 7px 15px rgba(48, 67, 78, 0.575);
   display: flex;
   justify-content: center;
@@ -83,6 +90,22 @@ li {
     display: flex;
     flex-wrap: wrap;
   }
+
+  nav {
+    height: auto;
+  }
+
+  li {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav--title {
+    margin-right: 5em;
+    font-family: "Fasthand", cursive;
+    font-size: 20px !important;
+  }
 }
 
 .cart--number {
@@ -91,4 +114,62 @@ li {
   padding: 2px 7px;
   border-radius: 10em;
   font-weight: 900;
+}
+
+.nav--logo {
+  width: 90px;
+  border-radius: 1.5em;
+}
+
+.nav--title {
+  margin-right: 5em;
+  font-family: "Fasthand", cursive;
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 1em;
+}
+
+.nav--links {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+li {
+  font-size: 19px;
+  font-family: "Righteous", cursive;
+}
+
+li:hover {
+  transform: scale(1.1);
+  transition: 0.7 ease-in-out;
+}
+
+.card--dot {
+  display: flex;
+}
+
+.nav--image {
+  width: 70px;
+  margin-right: 10px;
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: rgba(51, 51, 51, 0.884);
+  width: 100%;
+  height: 56px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  color: white;
+}
+
+.git {
+  border-radius: 5em;
 }

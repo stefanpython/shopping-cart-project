@@ -12,7 +12,14 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h3>Logo</h3>
+      <h3 className="nav--title">
+        {" "}
+        <span>
+          {" "}
+          <img className="nav--image" src="./images/vip.png" alt="" />
+        </span>{" "}
+        ViPremium Designs
+      </h3>
       <ul className="nav--links">
         <Link to="/home" style={{ textDecoration: "none" }}>
           <li>Home</li>
@@ -21,7 +28,7 @@ const Navbar = () => {
           <li>Shop</li>
         </Link>
         <Link to="/cart" style={{ textDecoration: "none" }}>
-          <li>
+          <li className="card--dot">
             Cart <span className="cart--number">{totalNumber}</span>
           </li>
         </Link>
