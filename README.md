@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Simple E-comerce website built with React.
+
+Live [Demo](https://stefanpython.github.io/shopping-cart-project/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
